@@ -50,119 +50,22 @@ The Task Management System follows a client-server architecture, with a backend 
 
 - **Endpoint:** `POST http://localhost:8080/api/v1/tasks/user/1`
 - **Description:** Creates a new task for the specified user.
-- **Request Body:**
-  ```json
-  {
-    "task": "go to swim",
-    "details": "go to swim"
-  }
- - **Response Body:**
-   ```json
-   {
-    "message": "Task Saved",
-   "data": {
-    "id": 1,
-    "task": "go to swim",
-    "details": "go to swim",
-    "completed": false,
-    "taskCreatedAt": "Timestamp",
-    "user": {
-      "userId": 1,
-      "username": "sandesh",
-      "email": "sandesh@gmail.com"
-        }
-      }
-   }
 
 
 ### 2. Get Task by ID
 - **Endpoint**: GET- `http://localhost:8080/api/v1/tasks/1`
 - **Description**: Retrieves a task by its ID.
-- Response Body:
-```json
-{
-  "message": "Found task",
-  "data": {
-    "id": 1,
-    "task": "go to swim",
-    "details": "go to swim",
-    "completed": false,
-    "taskCreatedAt": "Timestamp",
-    "user": {
-      "userId": 1,
-      "username": "sandesh",
-      "email": "sandesh@gmail.com"
-    }
-  }
-}
 
 
-```
 ### 3. Get All Tasks for User
 - **Endpoint**: GET- `http://localhost:8080/api/v1/tasks/user/1`
 - **Description**: Retrieves all tasks for the specified user.
-- Response Body:
-```json
 
-[
-  {
-    "id": 1,
-    "task": "go to swim",
-    "details": "go to swim",
-    "completed": false,
-    "taskCreatedAt": "Timestamp",
-    "user": {
-      "userId": 1,
-      "username": "sandesh",
-      "email": "sandesh@gmail.com"
-    }
-  },
-  {
-    "id": 2,
-    "task": "play cricket",
-    "details": "play cricket",
-    "completed": true,
-    "taskCreatedAt": "Timestamp",
-    "user": {
-      "userId": 1,
-      "username": "sandesh",
-      "email": "sandesh@gmail.com"
-    }
-  }
-]
-
-```
 ### 4. Update Task
 - **Endpoint**: PUT- `http://localhost:8080/api/v1/tasks/1`
 - **Description**: Updates the details of a task.
 - Request Body:
-```json
 
-{
-  "task": "go to swim in the afternoon",
-  "details": "go to swim in the afternoon"
-}
-```
-- Response Body:
-```json
-
-{
-  "message": "Task updated!",
-  "data": {
-    "id": 1,
-    "task": "go to swim in the afternoon",
-    "details": "go to swim in the afternoon",
-    "completed": false,
-    "taskCreatedAt": "Timestamp",
-    "user": {
-      "userId": 1,
-      "username": "sandesh",
-      "email": "sandesh@gmail.com"
-    }
-  }
-}
-
-```
 
 ### 5. Delete Task
 - **Endpoint**: DELETE- `http://localhost:8080/api/v1/tasks/1`
@@ -175,13 +78,3 @@ The Task Management System follows a client-server architecture, with a backend 
 }
 
 ```
----------------------------------------------------------------------------------------
-## video
-https://github.com/sandesh300/Task-Management-System/assets/92014891/f699a9a7-2f60-442c-8061-a076ad9dbfdb
-
-## MySQL Database Snapshot -
-### Task 
-![image](https://github.com/sandesh300/Task-Management-System/assets/92014891/1aa8dfb3-2ece-4fef-b8f1-4ae84c543a25)
-
-### User
-![image](https://github.com/sandesh300/Task-Management-System/assets/92014891/204a45c1-f436-4ac5-a6f4-3573b2121a5a)
