@@ -1,0 +1,110 @@
+Task Management System (TMS)
+A Task Management System (TMS) built using Spring Boot and React.js, designed to streamline task creation, assignment, tracking, and reporting for individuals and teams.
+Features
+Check "Project-Documentations" folder for the complete Project Documents.
+Core Features:
+•	Task Management: Create, update, delete, and manage tasks.
+•	Role-Based Access Control: Admin, Manager, and Employee roles with defined permissions.
+•	Notifications: Email reminders for upcoming deadlines.
+•	Analytics and Reporting: Dashboards for task completion statistics.
+•	Integration: RESTful APIs for third-party integration.
+Additional Features:
+•	Secure Authentication: JWT-based authentication for secure user sessions.
+•	Custom Filtering: Search tasks by priority, status, and deadlines.
+•	GitHub Integration: Track pull requests and commits.
+Tech Stack
+Backend:
+•	Spring Boot (Java)
+•	MySQL (Database)
+•	JWT (Authentication)
+•	JaCoCo (Code Coverage)
+Frontend:
+•	React.js (UI Framework)
+•	Material-UI (UI Components)
+DevOps:
+•	Jenkins (CI/CD)
+•	Maven (Build Tool)
+•	JaCoCo Plugin (Post-build analysis)
+
+Installation Guide
+Prerequisites:
+•	Java 11 or higher
+•	Node.js
+•	Maven
+•	MySQL
+•	Git
+Steps to Run Locally:
+1.	Clone the repository:
+git clone https://github.com/hema8293/tsm-final.git
+cd tsm-final
+2.	Set up the database:
+o	Create a database named task_management.
+o	Update the application.properties file with your database credentials.
+3.	Build and run the backend:
+cd src
+mvn clean install
+mvn spring-boot:run
+4.	Start the frontend:
+cd frontend
+npm install
+npm start
+5.	Access the application:
+o	Frontend: http://localhost:3000
+o	Backend: http://localhost:8080
+
+Jenkins Pipeline Setup
+Steps to Configure: (http://localhost:9090)
+1.	Add a Jenkins job named 01-TMS-Prod-Build.
+2.	Pull the code from GitHub: 
+o	Repository URL: https://github.com/hema8293/tsm-final.git 
+3.	Add triggers: 
+o	Poll SCM: H/5 * * * *
+o	Daily Trigger: H 17 * * *
+o	GitHub Pull Request Approval.
+4.	Add build steps: 
+o	Build: 			mvn clean install
+o	Test & Coverage: 	mvn test jacoco:report
+5.	Post-build actions: 
+o	Publish JaCoCo reports.
+o	Send email notifications to jd.saravanan93@gmail.com, yaminimerugu2022@gmail.com, 
+
+Testing and Code Coverage
+Unit, Integration, and System Tests:
+•	Unit Tests: Cover core functionality like task creation and updates.
+•	Integration Tests: Validate API endpoints and service integrations.
+•	System Tests: Ensure end-to-end functionality.
+JaCoCo Coverage Report:
+•	Location: target/site/jacoco/index.html
+•	Coverage: 96%+ for lines, branches, and complexity.
+API Documentation
+•	Base URL: http://localhost:8080/api/v1/
+•	Endpoints: 
+o	GET /tasks: Retrieve all tasks.
+o	POST /tasks: Create a new task.
+o	PUT /tasks/{id}: Update an existing task.
+o	DELETE /tasks/{id}: Delete a task.
+
+
+How to Contribute:
+1.	Fork the repository.
+2.	Create a new feature branch: 
+git checkout -b feature/your-feature
+3.	Commit your changes: 
+git commit -m "Add your message here"
+4.	Push to your branch: 
+git push origin feature/your-feature
+5.	Open a pull request.
+
+
+
+
+________________________________________
+Contact
+For questions or support, reach out to:
+•	Developer: Hema8293, yaminimerugu, AnkithreddyBureddy
+•	Email: jd.saravanan93@gmail.com, yaminimerugu2022@gmail.com, 
+
+________________________________________
+License
+This project is licensed under Conestoga License.
+
