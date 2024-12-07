@@ -1,0 +1,5 @@
+Class,Lines Covered,Total Lines,Coverage
+TaskController,120,125,96%
+TaskService,150,155,97%
+TaskRepository,80,85,94%
+Task,130,135,96%

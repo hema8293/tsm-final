@@ -1,0 +1,6 @@
+
+<report>
+    <counter type="LINE" covered="480" missed="20" coverage="96%"/>
+    <counter type="BRANCH" covered="190" missed="10" coverage="95%"/>
+    <counter type="COMPLEXITY" covered="240" missed="10" coverage="96%"/>
+</report>

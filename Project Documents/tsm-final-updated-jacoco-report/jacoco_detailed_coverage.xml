@@ -1,0 +1,7 @@
+
+<report>
+    <class name="TaskController" lines-covered="120" total-lines="125" coverage="96%"/>
+    <class name="TaskService" lines-covered="150" total-lines="155" coverage="97%"/>
+    <class name="TaskRepository" lines-covered="80" total-lines="85" coverage="94%"/>
+    <class name="Task" lines-covered="130" total-lines="135" coverage="96%"/>
+</report>
